@@ -1,0 +1,369 @@
+body, html{
+    width:100%;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: #eeeeee;
+}
+
+body{ 
+    margin: 0;
+    display: grid;
+    grid-template-columns:  15% 22% 22% 22% auto;
+    grid-template-rows: 12% 55% 60%;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header header header header"
+    "sidebar sect1  sect2  sect3 auto"
+    "sidebar sect4  sect5  sect6 auto";
+}
+
+aside{
+    grid-area: sidebar;
+    padding-left:25px;
+    padding-right:25px;
+}
+
+aside ul{
+    list-style-type: none;
+}
+
+hr.style-three{
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    z-index:100;
+}
+
+hr.new4{
+    border-top: 1px solid #aaaaaa;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+.form_text input{
+    width: 50px;
+    height: 30px;
+    margin:0 5px 0 5px;
+    border:none;
+    cursor: pointer;
+}
+
+.centerize{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clear{
+    background-color: #aaaaaa;
+    color: #eeeeee;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.clear.hover{
+    background-color: #000;
+}
+
+header{
+    grid-area: header;
+}
+
+h1{
+    font-size: 35px;
+    padding-top:14px;
+    padding-left:25px;
+    position: relative;
+    z-index: 10px;
+}
+
+header .yellow{ 
+    display:flex;
+    width: 25px;
+    height: 22px;
+    margin-top:30px;
+    margin-left:15px;
+    background-color: #fad84a;
+    padding:10px;
+    position: absolute;
+}
+
+/*======SECTIONS==1-6=======*/
+
+section:nth-of-type(1){
+    grid-area: sect1;
+}
+
+section:nth-of-type(2){
+    grid-area: sect2;
+}
+
+section:nth-of-type(3){
+    grid-area: sect3;
+}
+
+section:nth-of-type(4){
+    grid-area: sect4;
+}
+
+section:nth-of-type(5){
+    grid-area: sect5;
+}
+
+section:nth-of-type(6){
+    grid-area: sect6;
+}
+
+/*==============================*/
+
+section .numbers{
+    position: relative;
+    display: inline;
+    display:flex;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    width: 50px;
+    height: 50px;
+}
+
+.numbers p{
+      font-size: 55px;
+}
+
+.bolder{ 
+      font-weight: bolder; 
+      color:#d8d7d7;
+}
+
+.lighter{ 
+       font-weight: lighter; 
+}
+
+.pic{
+    display: flex;
+    justify-content:center;
+}
+
+
+#one{
+    background-color:yellow;
+    position: absolute;
+    display: flex;
+    height: 240px;
+    width: 180px;
+    margin-left: 60px;
+    display: none;
+}
+
+#red{
+    background-color:#FF0000;
+    position: absolute;
+    display: flex;
+    height: 240px;
+    width: 180px;
+    margin-left: 60px;
+}
+
+.pic1{
+    display: flex;
+    justify-content:center;
+    position:relative;
+}
+
+.title h4{
+    text-align: center;
+}
+
+.title h3{
+    text-align: center;
+}
+
+
+hr.new{   /* RED-LINE*/
+    border: 1px solid #FF0000;
+    background-color: #FF0000;
+    width: 30px;
+}
+
+.title p{
+    text-align: center;
+    color:#AAAAAA;
+    font-size: 15px;
+}
+
+a{
+    color:#FF0000;
+    text-decoration: none;
+    border-bottom: dashed 1px #FF0000;
+    font-weight: bold;
+}
+
+/*===============POP-UP-SECTION===============*/
+
+#popup-bgc{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#popup-content{
+    background-color: white;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+#inmodal{
+    height: 656px;
+}
+
+#arrows{
+    display: flex;
+    justify-content:space-around; 
+    margin-top: -450px;
+    padding:100px;
+}
+
+#hiddenElement,
+#prev,
+#next, 
+#turnToFirst {
+    cursor: pointer;
+    background-color: #000;
+    color: #eeeeee;
+    font-weight: bold;
+    font-size: 50px;
+    z-index: 100;
+    border:none;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+#hiddenElement{
+    visibility: hidden;
+}
+
+#prev:hover{
+    background-color: #aaaaaa;
+    color:#000;
+}
+#next:hover{
+    background-color: #aaaaaa;
+    color:#000;
+}
+#turnToFirst:hover{
+    background-color: #aaaaaa;
+    color:#000;
+    
+}
+
+
+/* The Close Button */
+#close{
+    color: #000;
+    position: absolute;
+    top: -47px;
+    right: -35px;
+    font-size: 35px;
+    font-weight: bold;
+    z-index:30;
+}
+
+.dot{
+    position: absolute;
+    top: -45px;
+    right: -43px;
+    height: 35px;
+    width: 35px;
+    background-color:#eeeeee;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+#close:hover{
+    color: #aaaaaa;
+}
+
+.cursor{
+    cursor: pointer;
+
+}
+
+/*=============MEDIA-QUERY=============*/
+
+@supports (display:grid) and (display:flex) {
+
+@media (max-width: 1024px ){
+    body{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 24% 38% 38%;
+        grid-template-rows: 10% 52% 52% 65%;
+        grid-template-areas: 
+        "header   header header"
+        "sidebar  sect1  sect2"
+        "sidebar  sect3  sect4"
+        "sidebar  sect5  sect6"
+    }
+}
+
+@media (max-width: 760px){
+    body{
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 10% 40% 55% 55% 55%;
+        grid-template-areas: 
+        "header   header"
+        "sidebar  sidebar"
+        "sect1  sect2"
+        "sect3  sect4"
+        "sect5  sect6"
+    }
+}
+
+@media (max-width: 550px){
+    body{
+        margin: 0;
+        display: grid;
+        grid-template-columns:100% ;
+        grid-template-rows: 10% 28% 28% 28% 28% 28% 28% 28%;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "sect1" 
+        "sect2"
+        "sect3"
+        "sect4"
+        "sect5"
+        "sect6"
+    }
+
+    section{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    section h3{
+        display: flex;
+        align-items:center;
+    }
+}
+}
