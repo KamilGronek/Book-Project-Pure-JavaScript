@@ -405,11 +405,13 @@ function getAndSetVal2(section2,input) {
         let pagesInt =  parseInt(pages);    
         let inputInt = parseInt(input);       
 
+        let bodyNode = document.getElementsByTagName("body")[0];
+        
         if(inputInt <= pagesInt ){    
             section2[i].style.display="";
         }
         else{
-            section2[i].style.display="none";
+            bodyNode.removeChild(section2[i]);
         }
     }
 }
