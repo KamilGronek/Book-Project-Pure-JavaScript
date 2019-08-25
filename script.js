@@ -151,9 +151,10 @@ function bookGenerator(jsonTab){
 
 //====================functions js======================//
 function hideSection(){
+    let bodyNode = document.getElementsByTagName("body")[0];
     let section2 = document.querySelectorAll("section");
     for(let i=0; i <section2.length; i++){  
-        section2[i].style.display="none";                                 
+        bodyNode.removeChild(section2[i]);                                           
     }  
 }
 
